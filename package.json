@@ -1,15 +1,23 @@
 {
   "name": "nucampsite",
   "version": "1.0.0",
-  "description": "This is a website for the fictional campsites review site NuCamp.",
+  "description": "This is a website for the fictional campsites review site Nucamp",
   "main": "index.html",
   "scripts": {
     "lite": "lite-server",
     "start": "npm run lite",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phanter-coder/nucamp-bootstrap.git"
+  },
   "author": "Phillip",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Phanter-coder/nucamp-bootstrap/issues"
+  },
+  "homepage": "https://github.com/Phanter-coder/nucamp-bootstrap#readme",
   "devDependencies": {
     "lite-server": "^2.5.4"
   },
