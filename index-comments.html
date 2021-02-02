@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags always come first -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+
+  <!-- Additional CSS must be placed after Bootstrap CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+
+  <title>NuCamp: A Better Way To Camp</title>
+</head>
+
+<body>
+
+  <header class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <div class="row">
+        <div class="col-4 col-sm-3 col-md-2 align-self-center">
+          <img src="img/logo.png" class="img-fluid" />
+        </div>
+      </div>
+      <div class="col">
+        <h1>NuCamp</h1>
+        <!--
+          JOHN COMMENT:
+          You're missing an h2 tag below the h1 tag created on line 31:
+          <h2>a better way to camp</h2>
+        -->
+      </div>
+      <div class="col mt-4">
+        <!--
+        JOHN COMMENT:
+        Your div created on line 38 is missing the following classes:
+        - Remove the col class
+        - col-md-4 
+        - col-xl-2
+      -->
+        <a type="button" class="btn btn-info" style="float: right;" href="#reserveForm"> Reserve Campsite</a>
+        <!--
+          JOHN COMMENT:
+          Remove the inline style here.
+
+          Also, add the following class:
+          - btn-lg
+        -->
+      </div>
+      <div>
+        <h2>a better way to camp</h2>
+      </div>
+      <!--
+        JOHN COMMENT:
+        Delete lines 55 - 57.
+      -->
+    </div>
+  </header>
+  <!--
+    JOHN COMMENT:
+    There's a number of issues with your jumbotron that cause your site to not mirror the mock. I listed the issues above. 
+
+    I know this can be a little confusing, so below is how your header should look:
+
+    <header class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 col-sm-3 col-md-2 align-self-center">
+            <img src="img/logo.png" class="img-fluid" />
+          </div>
+          <div class="col">
+            <h1>NuCamp</h1>
+            <h2>a better way to camp</h2>
+          </div>
+          <div class="col-md-4 col-xl-2 mt-4">
+            <a href="#reserveForm" role="button" class="btn btn-lg btn-info">Reserve Campsite</a>
+          </div>
+        </div>
+      </div>
+    </header>
+  -->
+
+  <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+        <!-- 
+        JOHN COMMENT:
+        For some unknown reason you have not one, but two buttons, one created on line 91 and one created on line 99.
+
+        The one created on line 91 is problematic and serves no purpose. With that said please delete line 91.
+      -->
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nucampNavbar"></div>
+        <!--
+          JOHN COMMENT:
+          The div created on line 102 is the div associated with the button created on line 99, however, it encloses nothing. The unordered list below should be nested inside the div created on line 102.
+        -->
+        <ul class="navbar-nav">
+          <li class="nav-item active"><a class="nav-link" href="#"> <i class="fa fa-home fa-lg"> </i> Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="aboutus.html"> <i class="fa fa-info fa-lg"> </i> About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#"> <i class="fa fa-list fa-lg"> </i> Sites</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html"> <i class="fa fa-address-card fa-lg"> </i>
+              Contact</a></li>
+        </ul>
+    </div>
+    </div>
+    <!--
+      JOHN COMMENT:
+      Your closing </div> created on line 115 is floating.
+
+      It's super importat that if your HTML tag is not self-closing that you always have a closing tag. Making the same mistake in JavaScript will break your program altogether.
+
+      I would strongly suggest using VS Code to auto populate the tag. For example rather than manually type the <div></div> tags, just type div and then hit Tab. This should add both the opening and closing tags and decrease any floating tag issue.
+
+      Please delete line 115.
+    -->
+  </nav>
+
+  <!--
+    JOHN COMMENT:
+    There's a number of issues with your navigation that cause your site to not mirror the mock. I listed the issues above. 
+
+    I know this can be a little confusing, so below is how your navigation should look:
+
+    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+      <div class="container">
+        <a class="navbar-brand" href="#"><img src="img/logo.png" height="30" width="30" /></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="nucampNavbar">
+          <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="aboutus.html"><i class="fa fa-info fa-lg"></i> About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-list fa-lg"></i> Sites</a></li>
+            <li class="nav-item"><a class="nav-link" href="contactus.html"><i class="fa fa-address-card fa-lg"></i>
+                Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  -->
+
+  <div class="container">
+    <div class="row row-content align-items-center">
+      <div class="col-sm-4 order-sm-last col-md-3">
+        <h2 class="text-sm-right">Discover & Review</h2>
+      </div>
+      <div class="col">
+        <div class="media">
+          <img class="d-flex mr-3 img-thumbnail" src="img/breadcrumb-trail-thumb.jpg" alt="Breadcrumb Trail" />
+          <div class="media-body align-self-center">
+            <h3>Our Campsites</h3>
+            <p class="d-none d-sm-block">Explore our growing database of curated campsites and leave your own reviews!
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-content align-items-center">
+      <div class="col-sm-4 col-md-3">
+        <h2>Featured Campsites</h2>
+      </div>
+      <div class="col">
+        <div class="media">
+          <h3>React Lake Campground</h3>
+          <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores
+            of the pristine React Lake is a favorite for fly fishers.</p>
+          <img class="d-flex ml-3 img-thumbnail " src="img/react-lake-thumb.jpg" alt="Breadcrumb Trail" />
+        </div>
+      </div>
+    </div>
+
+    <div class="row row-content align-items-center">
+      <div class="col-sm-4 order-sm-last col-md-3">
+        <h2 class="text-sm-right">Our Community Partners</h2>
+      </div>
+      <div class="col">
+        <div class="media">
+          <img class="d-flex mr-3 img-thumbnail" src="img/bootstrap-thumb.png" alt="Bootstrap Outfitters" />
+          <div class="media-body align-self-center">
+            <h3>Bootstrap Outfitters</h3>
+            <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row row-content align-items-center">
+      <div class="col-sm-6" class="mx-auto">
+        <div class="card">
+          <h3 class="card-header p-3 mb-2 bg-info text-white"> Reserve a Campsite </h3>
+          <div class="card-body">
+            <form id="reserveForm">
+              <div class="row form-group">
+                <label class="col-sm-6 mx-auto"> Number of Campers </label>
+                <div class="col">
+                  <select id="numCampers">
+                    <option>Select...</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row">
+                <label class="col-sm-6" class="mx-auto" for="date">Date</label>
+                <div class="col-sm-6">
+                  <input type="date" id="date" name="date" class="form-control" placeholder="">
+                </div>
+
+              </div>
+              <div class="row">
+                <div class="col">
+                  <button class="btn btn-primary" type="submit">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+
+
+  <footer class="site-footer">
+    <div class="conatiner"></div>
+    <div class="row row-content">
+      <div class="col-4 col-sm-2 offset-1">
+        <h5>Links</h5>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="aboutus.html">About</a></li>
+          <li><a href="#">Sites</a></li>
+          <li><a href="contactus.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="col-6 col-sm-5 text-center">
+        <h5>Social</h5>
+        <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+        <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
+        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+        . . .
+      </div>
+      <div class="col-sm-4 text-center">
+        <i class="fa fa-phone fa-lg text-primary"> </i> 1-206-555-1234<br />
+        <i class="fa fa-envelope fa-lg text-primary"> </i> campsites@nucamp.co
+      </div>
+  </footer>
+  <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
+  <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+  <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
+
+<!--
+  JOHN COMMENT:
+  A good start here Phillip, however, as you can see per my comments above there are a decent amount of significant issues with your code, which cause your site to not mirror the mock.
+
+  Rather than continue providing comments after your navigation, I would strongly suggest looking at the index.html file I provided you and your peers after class.
+
+  As mentioned in class the code I provided can be used to compare/contrast your code to mine if/when your site does not mirror the mock.
+
+  What I would suggest is the following:
+  1. Review my feedback above regarding both the header and navigation to see where you're making mistakes.
+  2. Review the file I attached called john-index.html, compare it against your index.html file.
+  - You do not need to run the john-index.html file. Instead, just save it to your project, then you can use the Split Editor option to show both files
+  3. Make the necessary changes to your index.html file before starting any of Week 3. The reason I suggest this is Week 3 will build on top of your code, which in its current state is unstable.
+  
+  Throughout this workshop assignment you:
+  - Reinforced your understanding of spacing using Bootstrap Utility classes
+  - Reinforced your understanding of colors using Bootstrap Utility classes
+  - Reinforced your understanding of the Bootstrap Grid
+  - Learned about the Bootstrap Card Component
+  - Learned about the Bootstrap Form Component
+  - How to create a relationship between an anchor tag and form element using the href attribute found on the anchor tag in conjunction with the id attribute found on the form element
+
+  Resources:
+  Spacing - https://getbootstrap.com/docs/4.1/utilities/spacing/
+  Colors - https://getbootstrap.com/docs/4.0/utilities/colors/
+  Card Component - https://getbootstrap.com/docs/4.1/components/card/
+  Form Component - https://getbootstrap.com/docs/4.0/components/forms/
+-->
